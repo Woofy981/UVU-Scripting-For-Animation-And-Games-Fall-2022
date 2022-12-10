@@ -111,8 +111,10 @@ GameObject:
   - component: {fileID: 3692987717242428372}
   - component: {fileID: 3692987717242428373}
   - component: {fileID: -5964896502438658989}
+  - component: {fileID: -1282352514595226622}
+  - component: {fileID: 8418524551016770592}
   m_Layer: 0
-  m_Name: Alien Trooper
+  m_Name: Alien Invader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,7 +129,7 @@ Transform:
   m_GameObject: {fileID: 3692987717242428378}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -0.6050663, y: 0, z: 32.981915}
-  m_LocalScale: {x: 9.064876, y: 2.9492083, z: 11.493002}
+  m_LocalScale: {x: 5.406062, y: 1.8269795, z: 7.1196995}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3692987716982083900}
@@ -226,3 +228,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-1282352514595226622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3692987717242428378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dbfc9eb10c9eb2498891c508c2e670b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topBounds: 50
+  lowerBounds: -30
+--- !u!114 &8418524551016770592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3692987717242428378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a83a8473b8501b048ba5820e6ed1c55e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
+  scoreToGive: 50

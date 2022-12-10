@@ -5,7 +5,9 @@ using UnityEngine;
 public class EnemySpawnManager : MonoBehaviour
 {
     public GameObject[] enemyPrefabs;
-    private float spawnRangeX = 14f, spawnPosZ = 40f, startDelay = 2f, spawnInterval = 3.5f;
+    [SerializeField]
+    private float spawnRangeX = 14f, spawnPosZ = 40f;
+    private float startDelay = 2f, spawnInterval = 3f;
     // Start is called before the first frame update
     void Start()
     {

@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 3118041411546926156}
   - component: {fileID: 3118041411546926157}
   - component: {fileID: -4759150990010920782}
+  - component: {fileID: 1962540967869470100}
+  - component: {fileID: 3245277660077310826}
   m_Layer: 0
   m_Name: Alien Scout
   m_TagString: Untagged
@@ -30,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 3118041411546926158}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -13.128536, y: 0, z: 31.278393}
-  m_LocalScale: {x: 4.771968, y: 1.2245301, z: 4.771968}
+  m_LocalScale: {x: 3.8862429, y: 0.9972451, z: 3.8862429}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3118041411913142587}
@@ -112,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9330fffdfded53a4f94d91b828064781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 15
 --- !u!54 &-4759150990010920782
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -129,6 +131,34 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1962540967869470100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3118041411546926158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dbfc9eb10c9eb2498891c508c2e670b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topBounds: 50
+  lowerBounds: -30
+--- !u!114 &3245277660077310826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3118041411546926158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a83a8473b8501b048ba5820e6ed1c55e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
+  scoreToGive: 25
 --- !u!1 &3118041411913142580
 GameObject:
   m_ObjectHideFlags: 0
