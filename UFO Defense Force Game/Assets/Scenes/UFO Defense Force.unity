@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hInput: 0
-  speed: 15
+  speed: 25
   laser: {fileID: 2886192079926224354, guid: 249c837c2df9f7c44be894b7754e3e5d, type: 3}
   blaster: {fileID: 1712495614}
 --- !u!1 &453641059
@@ -436,7 +436,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Score:'
+  m_text: 'Score: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -627,6 +627,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 3118041411546926158, guid: 47c4a5991255b7941b9717e5059072cc, type: 3}
+  - {fileID: 3118041411546926158, guid: 47c4a5991255b7941b9717e5059072cc, type: 3}
+  - {fileID: 3692987717242428378, guid: 37337736c9018414e9ec9ab5a4d2e898, type: 3}
   - {fileID: 3692987717242428378, guid: 37337736c9018414e9ec9ab5a4d2e898, type: 3}
   - {fileID: 7033839381704475214, guid: 416cd9df6513d004e9d5a7e0ede11024, type: 3}
   spawnRangeX: 14

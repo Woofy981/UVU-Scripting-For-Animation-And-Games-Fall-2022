@@ -6,7 +6,7 @@ public class EnemySpawnManager : MonoBehaviour
 {
     public GameObject[] enemyPrefabs;
     [SerializeField]
-    private float spawnRangeX = 14f, spawnPosZ = 40f;
+    private float spawnRangeX = 20f, spawnPosZ = 35f;
     private float startDelay = 2f, spawnInterval = 3f;
     // Start is called before the first frame update
     void Start()

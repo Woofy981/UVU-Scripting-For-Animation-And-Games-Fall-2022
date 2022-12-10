@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float hInput, speed; 
-    private float xRange = 14.5f;
+    private float xRange = 25f;
     public GameObject laser;
     public Transform blaster;
 
