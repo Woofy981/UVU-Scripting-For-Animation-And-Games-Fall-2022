@@ -8,28 +8,21 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed; public float jumpForce; 
     [Header("Health")]
     public int curHp; public int maxHp;
+    [Header("Attack")]
+    public int attackPower;
     [Header("Camera")]
     public float lookSensitivity; public float maxLookX; public float minLookX; private float rotX;
     private Camera camera;
     private Rigidbody rb;
-    private Weapon weapon;
-
-    void Awake()
-    {
-        weapon = GetComponent<Weapon>();
-    }
+    private Enemy enemy;
 
     // Start is called before the first frame update
     void Start()
     {
         camera = Camera.main;
         rb = GetComponent<Rigidbody>();
-
-        /*
-        GameUI.instance.UpdateHealthBar(curHp, maxHp);
-        GameUI.instance.UpdateScoreText(0);
-        GameUI.instance.UpdateAmmoText(weapon.curAmmo, weapon.maxAmmo);
-        */
+        enemy = GameObject.Find("Enemy").GetComponent<Enemy>();
+        curHp = maxHp;
     }
 
     public void TakeDamage(int damage)
@@ -39,12 +32,12 @@ public class PlayerController : MonoBehaviour
         if(curHp <= 0){
             Die();
         }
-        GameUI.instance.UpdateHealthBar(curHp, maxHp);
     }
     
      void Die()
     {
         GameManager.instance.LoseGame();
+        Time.timeScale = 0;
     }
 
     void Move()
@@ -83,13 +76,11 @@ public class PlayerController : MonoBehaviour
     public void GiveHealth(int amountToGive)
     {
         curHp = Mathf.Clamp(curHp + amountToGive, 0, maxHp);
-        GameUI.instance.UpdateHealthBar(curHp, maxHp);
     }
 
     public void GiveAmmo(int amountToGive)
     {
-        weapon.curAmmo = Mathf.Clamp(weapon.curAmmo + amountToGive, 0, weapon.maxAmmo);
-        GameUI.instance.UpdateAmmoText(weapon.curAmmo, weapon.maxAmmo);
+    
     }
 
     // Update is called once per frame
@@ -99,9 +90,7 @@ public class PlayerController : MonoBehaviour
         CamLook();
 
         if(Input.GetButton("Fire1")){
-            if(weapon.CanShoot()){
-                weapon.Shoot();
-            }
+            enemy.TakeDamage(attackPower);
         }
 
         if(Input.GetButtonDown("Jump")){
